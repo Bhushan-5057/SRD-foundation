@@ -92,7 +92,7 @@ export function TestimonialsSection() {
         </div>
 
         <article className="rounded-xl p-4 sm:p-5">
-          <p className="text-3xl font-bold leading-none text-[var(--brand-primary)]">"</p>
+          <p className="text-3xl font-bold leading-none text-[var(--brand-primary)]">&ldquo;</p>
           <p className="mt-2 text-base leading-7 text-[var(--text-primary)] sm:text-lg">
             {activeTestimonial.quote}
           </p>

@@ -20,7 +20,7 @@ export function ContactFormSection() {
           Get in Touch
         </p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--text-primary)] sm:text-4xl">
-          We'd Love to Hear From You
+          We&apos;d Love to Hear From You
         </h2>
         <div className="mx-auto mt-6 h-1.5 w-16 rounded-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] opacity-80" />
       </div>

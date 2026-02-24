@@ -65,7 +65,7 @@ export function InfoSection({
             }`}
           data-aos={reverse ? "fade-right" : "fade-left"}
         >
-          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+          <Image src={imageSrc} alt={imageAlt} fill priority={priority} className="object-cover" />
         </div>
       </div>
     </section>
