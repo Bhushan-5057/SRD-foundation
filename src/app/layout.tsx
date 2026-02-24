@@ -1,10 +1,21 @@
-﻿import { type Metadata } from "next";
+import { type Metadata } from "next";
+import { Poppins } from "next/font/google";
+import { Chatbot } from "@/components/common/Chatbot";
+import { AOSInit } from "@/components/common/AOSInit";
+import { PageLoader } from "@/components/common/PageLoader";
+import { SiteShell } from "@/components/SiteShell";
 import "./globals.css";
 import { Providers } from "./providers";
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
 export const metadata: Metadata = {
-  title: "SRD Foundation Frontend",
-  description: "Next.js + TypeScript + Redux Toolkit + Tailwind CSS",
+  title: "SRD Foundation",
+  description: "Supporting Newcomers & Seniors",
 };
 
 export default function RootLayout({
@@ -14,8 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className="min-h-screen bg-slate-50 text-slate-900 antialiased">
-        <Providers>{children}</Providers>
+      <body suppressHydrationWarning className={`${poppins.variable} min-h-screen antialiased`}>
+        <Providers>
+          <PageLoader />
+          <AOSInit />
+          <SiteShell>{children}</SiteShell>
+          <Chatbot />
+        </Providers>
       </body>
     </html>
   );
