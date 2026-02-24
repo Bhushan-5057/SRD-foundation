@@ -1,10 +1,11 @@
 import { HeroSection } from "@/components/common/HeroSection";
-import { InfoSection } from "@/components/common/InfoSection";
+import { InfoSection } from "@/components/pages/donate/InfoSection";
 import { SITE_CONTENT } from "@/content/site-content";
-import Enjoyimage from "../../../public/assets/enjoy.jpg"
-import Donateimage from "../../../public/assets/donate.jpg"
-import Helpingimage from "../../../public/assets/helping3.jpg"
-import Charityimage from "../../../public/assets/charity2.jpg"
+import Enjoyimage from "../../../public/assets/enjoy.jpg";
+import Donateimage from "../../../public/assets/donate.jpg";
+import Helpingimage from "../../../public/assets/helping3.jpg";
+import Charityimage from "../../../public/assets/charity2.jpg";
+import DonationDetailsImage from "../../../public/assets/heart.jpg";
 
 export default function DonatePage() {
   return (
@@ -18,17 +19,18 @@ export default function DonatePage() {
         secondaryAction={{ href: "/impact", label: "View Impact" }}
         tags={["Community Powered", "No Ads", "Direct Support"]}
         imageSlots={[
-          { src: Enjoyimage, alt: "Donation helping community placeholder" },
-          { src: Donateimage, alt: "Support local charity people placeholder" },
-          { src: Helpingimage, alt: "Hands holding heart donation concept placeholder" },
-          { src: Charityimage, alt: "Community donation impact placeholder" },
+          { src: Enjoyimage, alt: "Donation helping community" },
+          { src: Donateimage, alt: "Support local charity people" },
+          { src: Helpingimage, alt: "Hands holding heart donation concept" },
+          { src: Charityimage, alt: "Community donation impact" },
         ]}
       />
 
       <InfoSection
         heading={SITE_CONTENT.donation.heading}
         text={SITE_CONTENT.donation.text}
-        imagePlaceholder={SITE_CONTENT.donation.imagePlaceholder}
+        imageSrc={DonationDetailsImage}
+        imageAlt="People supported through donations"
         action={SITE_CONTENT.donation.action}
       />
     </div>

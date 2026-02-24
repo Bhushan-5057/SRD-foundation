@@ -7,7 +7,6 @@ export interface HelpCardContent {
   key: "forms" | "senior" | "guidance" | "community";
   title: string;
   description: string;
-  imagePlaceholder: string;
 }
 
 export const SITE_CONTENT = {
@@ -25,7 +24,6 @@ export const SITE_CONTENT = {
   about: {
     heading: "Community Support That Feels Personal",
     text: "We are a volunteer-driven community network supporting newcomers and seniors across Ontario. Instead of just sharing links or phone numbers, we provide real, person-to-person assistance - helping individuals understand, navigate, and complete everyday tasks with confidence.",
-    imagePlaceholder: "Community support illustration placeholder",
   },
   howWeHelp: {
     heading: "How We Help",
@@ -35,28 +33,24 @@ export const SITE_CONTENT = {
         title: "Guidance & Forms",
         description:
           "We help you understand and complete important forms, applications, and services step by step.",
-        imagePlaceholder: "Help with paperwork illustration placeholder",
       },
       {
         key: "senior",
         title: "Appointment Support",
         description:
           "Volunteers can accompany you to important appointments and help you communicate clearly.",
-        imagePlaceholder: "Appointment assistance illustration placeholder",
       },
       {
         key: "guidance",
         title: "Daily Assistance",
         description:
           "Simple help with everyday tasks - from understanding letters to navigating local systems.",
-        imagePlaceholder: "Guidance support flat illustration placeholder",
       },
       {
         key: "community",
         title: "Community Connection",
         description:
           "We connect you with local resources, programs, and support networks that truly help.",
-        imagePlaceholder: "Community support icon set placeholder",
       },
     ] satisfies HelpCardContent[],
   },
@@ -69,7 +63,6 @@ export const SITE_CONTENT = {
       "Focus on practical outcomes",
       "Comfortable and friendly approach",
     ],
-    imagePlaceholder: "Volunteer guidance moment placeholder",
   },
   impact: {
     heading: "Real Support. Real Impact.",
@@ -83,12 +76,10 @@ export const SITE_CONTENT = {
   appointmentsSupport: {
     heading: "Appointments & Support",
     text: "From medical appointments to service offices, volunteers help individuals prepare, attend, and communicate with confidence.",
-    imagePlaceholder: "Doctor appointment assistance placeholder",
   },
   communityNetwork: {
     heading: "Community Network",
     text: "We connect people with local groups, trusted programs, and supportive neighbors to build strong and lasting relationships.",
-    imagePlaceholder: "Diverse community group placeholder",
   },
   donation: {
     heading: "Support Someone in Your Community",
@@ -97,33 +88,31 @@ export const SITE_CONTENT = {
       href: "mailto:donations@srdfoundation.ca",
       label: "To donate, email: donations@srdfoundation.ca",
     } satisfies SectionAction,
-    imagePlaceholder: "Hands holding heart donation concept placeholder",
   },
   volunteer: {
     heading: "Become a Volunteer",
     text: "Make a real difference by helping someone navigate everyday challenges. Your time, guidance, and presence can change someone's experience completely.",
     action: { href: "/contact", label: "Join as a Volunteer" } satisfies SectionAction,
-    imagePlaceholder: "Volunteer support in community placeholder",
   },
   homePreviews: [
     {
       title: "How We Help",
-      text: "Discover how we support forms, appointments, daily needs, and local connection.",
+      text: "Discover our comprehensive approach to supporting the community. From assisting with complex government forms to accompanying individuals to essential appointments, we provide hands-on, practical guidance tailored to meet daily needs and foster strong local connections.",
       href: "/how-we-help",
     },
     {
       title: "Impact",
-      text: "See the real outcomes of person-to-person community support.",
+      text: "See the real, tangible outcomes of our person-to-person community support. Every interaction and every hour volunteered creates meaningful change, bringing hope, confidence, and relief to those facing difficult times in their everyday lives.",
       href: "/impact",
     },
     {
       title: "Donate",
-      text: "Help fund practical support for newcomers and seniors in Ontario.",
+      text: "Help fund critical, on-the-ground support for newcomers and seniors across Ontario. Because we don't run advertisements, every contribution goes directly toward building accessible resources, organizing volunteer efforts, and creating stronger neighborhoods.",
       href: "/donate",
     },
     {
       title: "Volunteer",
-      text: "Join our volunteers and make local support more accessible.",
+      text: "Join our dedicated network of volunteers and play a vital role in making local assistance more accessible. Your time and compassion can completely transform someone's experience, providing the comforting guidance they need to succeed.",
       href: "/contact",
     },
   ],

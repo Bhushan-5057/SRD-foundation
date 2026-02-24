@@ -29,7 +29,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-[var(--border-color)] bg-[var(--surface)]/95 backdrop-blur">
+      <header className="sticky top-0 z-40 bg-[var(--surface)]/95 backdrop-blur">
         <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-4 md:px-6">
           <Link href="/" className="inline-flex items-center" aria-label="SRD Foundation Home">
             <Image

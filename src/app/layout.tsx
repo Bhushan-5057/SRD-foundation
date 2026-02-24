@@ -1,6 +1,8 @@
 import { type Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Chatbot } from "@/components/common/Chatbot";
+import { AOSInit } from "@/components/common/AOSInit";
+import { PageLoader } from "@/components/common/PageLoader";
 import { SiteShell } from "@/components/SiteShell";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -25,6 +27,8 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning className={`${poppins.variable} min-h-screen antialiased`}>
         <Providers>
+          <PageLoader />
+          <AOSInit />
           <SiteShell>{children}</SiteShell>
           <Chatbot />
         </Providers>

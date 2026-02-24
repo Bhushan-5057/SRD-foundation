@@ -81,20 +81,35 @@ export function HeroSection({
       <div className="relative grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
         <div className="max-w-xl">
           {sectionLabel ? (
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--text-muted)]">
+            <p
+              data-aos="fade-up"
+              className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--text-muted)]"
+            >
               {sectionLabel}
             </p>
           ) : null}
 
-          <h1 className="text-3xl font-semibold leading-tight text-[var(--text-primary)] sm:text-4xl lg:text-5xl">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="text-3xl font-semibold leading-tight text-[var(--text-primary)] sm:text-4xl lg:text-5xl"
+          >
             {renderTitle(title, highlightText)}
           </h1>
-          <p className="mt-4 max-w-lg text-sm leading-7 text-[var(--text-muted)] sm:text-base">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="mt-4 max-w-lg text-sm leading-7 text-[var(--text-muted)] sm:text-base"
+          >
             {description}
           </p>
 
           {primaryAction || secondaryAction || extraActions.length > 0 ? (
-            <div className="mt-7 flex flex-wrap items-center gap-3">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="mt-7 flex flex-wrap items-center gap-3"
+            >
               {primaryAction ? (
                 <Link
                   href={primaryAction.href}
@@ -124,7 +139,11 @@ export function HeroSection({
           ) : null}
 
           {tags.length > 0 ? (
-            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              className="mt-6 flex flex-wrap gap-x-5 gap-y-2"
+            >
               {tags.map((tag) => (
                 <span
                   key={tag}
@@ -141,7 +160,14 @@ export function HeroSection({
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:auto-rows-[120px]">
           {slots.map((slot, index) => {
             const media = slot.src ? (
-              <Image src={slot.src} alt={slot.alt} fill className="object-cover transition duration-500 group-hover:scale-[1.03]" />
+              <Image
+                src={slot.src}
+                alt={slot.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                priority={index === 0}
+                className="object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
             ) : (
               <div className="flex h-full items-center justify-center bg-[var(--surface-soft)] text-xs font-medium text-[var(--text-muted)]">
                 Add image {index + 1}
@@ -150,11 +176,22 @@ export function HeroSection({
 
             const sharedClassName = `group relative overflow-hidden rounded-2xl border border-[var(--border-color)] bg-[var(--surface)] min-h-[180px] sm:min-h-[120px] ${getImageLayoutClass(index)}`;
             return slot.href ? (
-              <Link key={`${slot.alt}-${index}`} href={slot.href} className={sharedClassName}>
+              <Link
+                key={`${slot.alt}-${index}`}
+                href={slot.href}
+                className={sharedClassName}
+                data-aos="zoom-in"
+                data-aos-delay={index * 100 + 200}
+              >
                 {media}
               </Link>
             ) : (
-              <article key={`${slot.alt}-${index}`} className={sharedClassName}>
+              <article
+                key={`${slot.alt}-${index}`}
+                className={sharedClassName}
+                data-aos="zoom-in"
+                data-aos-delay={index * 100 + 200}
+              >
                 {media}
               </article>
             );

@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { ImagePlaceholder } from "@/components/common/ImagePlaceholder";
+import Image, { type StaticImageData } from "next/image";
 
 interface InfoSectionProps {
   heading: string;
   text: string;
-  imagePlaceholder: string;
+  imageSrc: string | StaticImageData;
+  imageAlt: string;
   action?: {
     href: string;
     label: string;
@@ -17,14 +18,15 @@ interface InfoSectionProps {
 export function InfoSection({
   heading,
   text,
-  imagePlaceholder,
+  imageSrc,
+  imageAlt,
   action,
   bullets = [],
   reverse = false,
   compact = false,
 }: InfoSectionProps) {
   return (
-    <section className="rounded-3xl p-5 sm:p-7">
+    <section className="mt-6 rounded-3xl p-5 sm:p-7">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
         <div className={reverse ? "lg:order-2" : ""}>
           <h2 className={compact ? "text-2xl font-semibold text-[var(--text-primary)]" : "text-3xl font-semibold text-[var(--text-primary)]"}>
@@ -53,7 +55,13 @@ export function InfoSection({
           ) : null}
         </div>
 
-        <ImagePlaceholder label={imagePlaceholder} className={reverse ? "lg:order-1" : ""} />
+        <div
+          className={`relative min-h-[220px] overflow-hidden rounded-2xl border border-[var(--border-color)] bg-[var(--surface)] ${
+            reverse ? "lg:order-1" : ""
+          }`}
+        >
+          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+        </div>
       </div>
     </section>
   );

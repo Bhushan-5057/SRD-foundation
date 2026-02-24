@@ -13,6 +13,7 @@ pnpm-debug.log*
 
 # Env files
 .env*
+package-lock.json
 
 # OS files
 .DS_Store

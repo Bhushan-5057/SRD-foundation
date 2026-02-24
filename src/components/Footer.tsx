@@ -8,8 +8,8 @@ import {
   FiLinkedin,
   FiMail,
   FiPhone,
-  FiTwitter,
 } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 import { NAV_ITEMS } from "@/constants/navigation";
 
 const COMPANY_LINKS = [
@@ -67,7 +67,7 @@ export function Footer() {
                   className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
                   aria-label="Twitter"
                 >
-                  <FiTwitter className="h-4 w-4" />
+                  <FaXTwitter className="h-4 w-4" />
                 </Link>
                 <Link
                   href="https://instagram.com"
@@ -118,12 +118,13 @@ export function Footer() {
                       alt="Canada flag"
                       width={20}
                       height={14}
-                      className="mt-1 h-4 w-6 shrink-0 rounded-sm border border-[var(--border-color)] object-cover"
+                      style={{ height: "auto" }}
+                      className="mt-1 w-6 shrink-0 rounded-sm object-cover"
                     />
                     <span>Suite 600, 3300 Highway 7 West, Vaughan, ON, L4L 1A6, Canada</span>
                   </p>
                   <p className="flex items-center gap-3">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]">
                       <FiPhone className="h-4 w-4" />
                     </span>
                     <Link href="tel:+16472477735" className="transition-colors hover:text-[var(--brand-primary)]">
@@ -131,7 +132,7 @@ export function Footer() {
                     </Link>
                   </p>
                   <p className="flex items-center gap-3">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]">
                       <FiMail className="h-4 w-4" />
                     </span>
                     <Link
