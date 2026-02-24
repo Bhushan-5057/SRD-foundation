@@ -1,0 +1,401 @@
+{
+  "welcomeMessage": "👋 Hello! Welcome to SRD Foundation. We support newcomers and seniors across Ontario with practical day-to-day assistance. How can I help you today?",
+  "quickReplies": [
+    "What services do you offer?",
+    "How can I request assistance?",
+    "How can I donate?",
+    "How do I contact you?"
+  ],
+  "responses": [
+    {
+      "keywords": [
+        "service",
+        "services",
+        "what do you do",
+        "offer",
+        "provide",
+        "help",
+        "assist",
+        "support",
+        "how we help",
+        "what you do",
+        "settlement",
+        "senior support",
+        "interpretation",
+        "community connection"
+      ],
+      "answer": "SRD Foundation offers the following community support services:\n\n🏠 **Settlement Assistance** — Guidance for forms, services, and navigating local systems.\n👴 **Senior Support Visits** — Companionship and help with simple daily tasks.\n🗣️ **Interpretation Support** — Volunteers assist during important appointments.\n🤝 **Community Connection** — Connecting individuals to local resources and support programs.\n\nWe are a volunteer-run organization serving all of Ontario!"
+    },
+    {
+      "keywords": [
+        "request",
+        "request assistance",
+        "need help",
+        "get help",
+        "apply",
+        "how to apply",
+        "help me",
+        "someone in need",
+        "help someone"
+      ],
+      "answer": "To request assistance, you can:\n\n📋 Use the **'Request Assistance'** button on our website.\n📧 Email us at **info@srdfoundation.ca**\n📞 Call us at **+1 647 247 7735**\n\nWe are here to help newcomers and seniors with appointments, documents, and navigating local services!"
+    },
+    {
+      "keywords": [
+        "volunteer",
+        "volunteering",
+        "join",
+        "how to volunteer",
+        "become volunteer",
+        "volunteer driven",
+        "community volunteer",
+        "local volunteer group",
+        "start group"
+      ],
+      "answer": "We are a **volunteer-run community organization** and would love your help! 🌟\n\nTo volunteer or start a local support group in your city:\n\n📧 Email us at **info@srdfoundation.ca**\n📞 Call us at **+1 647 247 7735**\n\nTogether we can serve Ontario communities better!"
+    },
+    {
+      "keywords": [
+        "donate",
+        "donation",
+        "contribute",
+        "fund",
+        "support us",
+        "financial support",
+        "give",
+        "how to donate"
+      ],
+      "answer": "We do not run advertisements — support comes directly from community members. ❤️\n\nTo donate, please email us at:\n\n📧 **donations@srdfoundation.ca**\n\nYour support directly helps a newcomer or senior in your community!"
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "reach",
+        "call",
+        "connect",
+        "get in touch",
+        "message",
+        "phone number",
+        "how to contact",
+        "info"
+      ],
+      "answer": "📞 You can reach us through the following channels:\n\n📧 **Email**: info@srdfoundation.ca\n📱 **Phone**: +1 647 247 7735\n🌐 **Website**: srdfoundation.ca\n\nWe are a volunteer-run organization based in **Ontario, Canada**."
+    },
+    {
+      "keywords": [
+        "newcomer",
+        "newcomers",
+        "immigrant",
+        "new resident",
+        "settlement",
+        "new country",
+        "immigration",
+        "navigate services",
+        "new to canada"
+      ],
+      "answer": "We proudly support **newcomers across Ontario** with:\n\n📄 Guidance for government forms and services.\n🏥 Assistance attending healthcare appointments.\n🏛️ Help navigating local systems and offices.\n🗣️ Interpretation support during important meetings.\n\nWe provide direct person-to-person assistance — not just phone numbers or links!"
+    },
+    {
+      "keywords": [
+        "senior",
+        "seniors",
+        "elderly",
+        "old age",
+        "elder",
+        "grandparent",
+        "senior support",
+        "senior visit"
+      ],
+      "answer": "We provide dedicated support for **seniors across Ontario**: 👴👵\n\n🏠 Companionship and help with simple daily tasks.\n📋 Assistance understanding documents and letters.\n🏥 Volunteers accompany seniors to clinic and hospital visits.\n🤝 Connecting seniors to local community resources.\n\nWe prioritize **clarity and comfort** for seniors unfamiliar with local systems."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "appointments",
+        "hospital",
+        "clinic",
+        "government appointment",
+        "service office",
+        "booking appointment",
+        "accompany"
+      ],
+      "answer": "Our volunteers **accompany individuals** to important appointments including:\n\n🏥 Hospital and clinic visits.\n🏛️ Government and service office appointments.\n📋 Document submission appointments.\n\nWe don't just advise — we go with you step-by-step through real situations!"
+    },
+    {
+      "keywords": [
+        "document",
+        "documents",
+        "letters",
+        "housing letter",
+        "understand letter",
+        "explain document",
+        "hospital document",
+        "health card",
+        "form"
+      ],
+      "answer": "Our volunteers help individuals **understand important documents** such as:\n\n📄 Hospital and medical documents.\n🏠 Housing letters and notices.\n📋 Government forms and correspondence.\n🪪 Health card process and related paperwork.\n\nWe explain everything in **simple language** so you know exactly what action to take next!"
+    },
+    {
+      "keywords": [
+        "impact",
+        "community impact",
+        "how many",
+        "statistics",
+        "numbers",
+        "results",
+        "outcomes",
+        "helped"
+      ],
+      "answer": "SRD Foundation has made a real difference in Ontario communities! 🌟\n\n👥 **Newcomers assisted**\n👴 **Seniors supported**\n⏱️ **Volunteer hours contributed**\n🔗 **Individuals connected to services**\n\nEvery contribution — big or small — directly impacts someone in your community!"
+    },
+    {
+      "keywords": [
+        "response time",
+        "how long",
+        "when",
+        "reply",
+        "how quickly",
+        "wait time",
+        "24 hours",
+        "48 hours"
+      ],
+      "answer": "⏱️ We usually respond within **24–48 hours**.\n\nFor urgent needs, you can reach us directly:\n📧 **info@srdfoundation.ca**\n📞 **+1 647 247 7735**"
+    },
+    {
+      "keywords": [
+        "different",
+        "unique",
+        "how are you different",
+        "why choose",
+        "why srd",
+        "better",
+        "versus",
+        "not just referrals",
+        "person to person"
+      ],
+      "answer": "Here's what makes SRD Foundation different: 💡\n\n✅ We provide **direct person-to-person assistance** — not just phone numbers or links.\n✅ Volunteers **guide individuals step-by-step** through real situations.\n✅ We focus on **practical outcomes** — attending appointments together, explaining documents, and helping individuals understand what to do next.\n✅ We operate as a **community network**, not a service office.\n✅ People receive **familiar human support**, not institutional processing.\n✅ We prioritize **clarity and comfort** especially for seniors and newcomers."
+    },
+    {
+      "keywords": [
+        "area",
+        "location",
+        "where",
+        "ontario",
+        "city",
+        "region",
+        "serve",
+        "service area",
+        "which city",
+        "where do you operate",
+        "toronto"
+      ],
+      "answer": "📍 SRD Foundation serves communities **across Ontario, Canada**.\n\nWant to help in your city? Contact us to **start a local volunteer group** under SRD Foundation!\n\n📧 **info@srdfoundation.ca**\n📞 **+1 647 247 7735**"
+    },
+    {
+      "keywords": [
+        "who should contact",
+        "who can contact",
+        "eligibility",
+        "who is it for",
+        "who can apply",
+        "can I contact",
+        "am I eligible"
+      ],
+      "answer": "You should contact us if you need help:\n\n📄 Understanding letters or documents.\n🗓️ Booking or attending appointments.\n🏛️ Visiting service offices in Ontario.\n🏥 Navigating healthcare or government systems.\n\nWe especially support **newcomers** and **seniors** in Ontario. Anyone in need of practical, human assistance is welcome to reach out!"
+    },
+    {
+      "keywords": [
+        "hello",
+        "hi",
+        "hii",
+        "hey",
+        "good morning",
+        "good evening",
+        "good afternoon",
+        "greetings",
+        "hiii"
+      ],
+      "answer": "Hello! 👋 Welcome to SRD Foundation. We are here to support newcomers and seniors across Ontario. How can we help you today?"
+    },
+    {
+      "keywords": [
+        "thank",
+        "thanks",
+        "bye",
+        "goodbye",
+        "see ya",
+        "thank you",
+        "cool"
+      ],
+      "answer": "You're welcome! 😊 If you have more questions, feel free to ask. Have a wonderful day, and remember — we are always here for your community!"
+    },
+    {
+      "keywords": [
+        "about",
+        "about us",
+        "who are you",
+        "what is srd",
+        "srd foundation",
+        "organization",
+        "foundation",
+        "what is this"
+      ],
+      "answer": "SRD Foundation is a **volunteer-run community organization** based in Ontario, Canada. 🇨🇦\n\nWe support **newcomers and seniors** with practical, day-to-day assistance — from understanding documents to attending appointments together.\n\n🌱 Built by volunteers.\n🤝 Supported by community.\n🍁 Serving Ontario together.\n\n📧 info@srdfoundation.ca | 📞 +1 647 247 7735"
+    },
+    {
+      "keywords": [
+        "free",
+        "cost",
+        "fees",
+        "charge",
+        "paid",
+        "do I have to pay",
+        "is it free",
+        "price",
+        "payment",
+        "how much does it cost"
+      ],
+      "answer": "Yes, our services are completely **FREE**! 🎉\n\nSRD Foundation is a volunteer-run community organization. We do not charge any fees for our assistance.\n\nYour support through **donations** helps us continue serving the community, but there is absolutely no cost to receive help.\n\n📧 info@srdfoundation.ca | 📞 +1 647 247 7735"
+    },
+    {
+      "keywords": [
+        "language",
+        "languages",
+        "multilingual",
+        "translation",
+        "interpreter",
+        "speak my language",
+        "do you speak",
+        "hindi",
+        "punjabi",
+        "urdu",
+        "french",
+        "arabic",
+        "mother tongue"
+      ],
+      "answer": "Our volunteers come from diverse backgrounds and may speak **multiple languages**! 🌍\n\nWe also provide **Interpretation Support** — volunteers assist during important appointments to help bridge language barriers.\n\nTo find out which languages are currently supported in your area:\n\n📧 **info@srdfoundation.ca**\n📞 **+1 647 247 7735**"
+    },
+    {
+      "keywords": [
+        "hours",
+        "availability",
+        "open",
+        "working hours",
+        "when are you available",
+        "office hours",
+        "when can I call",
+        "schedule",
+        "timing",
+        "what time"
+      ],
+      "answer": "⏰ We are a volunteer-run organization, so availability may vary.\n\nYou can reach out to us **any time** via:\n📧 **info@srdfoundation.ca**\n📞 **+1 647 247 7735**\n\nWe typically respond within **24–48 hours**. For scheduled appointments or visits, our volunteers will coordinate a time that works for you!"
+    },
+    {
+      "keywords": [
+        "privacy",
+        "confidential",
+        "confidentiality",
+        "data",
+        "personal information",
+        "safe",
+        "secure",
+        "private",
+        "is my info safe",
+        "data privacy"
+      ],
+      "answer": "Your privacy is very important to us. 🔒\n\n✅ All information you share with us is kept **strictly confidential**.\n✅ We only use your details to coordinate the assistance you need.\n✅ We do not share your personal information with third parties.\n\nIf you have specific privacy concerns, feel free to email us at **info@srdfoundation.ca**."
+    },
+    {
+      "keywords": [
+        "urgent",
+        "emergency",
+        "immediate",
+        "right now",
+        "asap",
+        "urgent help",
+        "need help now",
+        "crisis",
+        "immediately",
+        "as soon as possible"
+      ],
+      "answer": "If you need **urgent assistance**, please contact us directly right away:\n\n📞 **Call: +1 647 247 7735**\n📧 **Email: info@srdfoundation.ca**\n\nFor life-threatening emergencies, please call **911** immediately.\n\nWe will do our best to connect you with a volunteer as quickly as possible! 🚨"
+    },
+    {
+      "keywords": [
+        "how does it work",
+        "process",
+        "steps",
+        "what happens",
+        "after I contact",
+        "procedure",
+        "workflow",
+        "how to start",
+        "getting started",
+        "what is the process"
+      ],
+      "answer": "Here's how our support process works: 📋\n\n1️⃣ **Contact Us** — Reach out via email or phone to describe your need.\n2️⃣ **We Match You** — We connect you with a suitable volunteer in your area.\n3️⃣ **Support Provided** — The volunteer assists you step-by-step (at appointments, with documents, etc.).\n4️⃣ **Follow-Up** — We check in to ensure your needs were fully met.\n\n📧 info@srdfoundation.ca | 📞 +1 647 247 7735"
+    },
+    {
+      "keywords": [
+        "health card",
+        "ohip",
+        "health insurance",
+        "ontario health",
+        "health card process",
+        "get health card",
+        "apply health card",
+        "medical card",
+        "provincial health"
+      ],
+      "answer": "We can help you navigate the **Ontario Health Card (OHIP)** process! 🪪\n\n✅ Explaining the application steps in simple language.\n✅ Helping you gather the required documents.\n✅ Accompanying you to the ServiceOntario office if needed.\n\nReach out and we'll guide you through it:\n📧 **info@srdfoundation.ca**\n📞 **+1 647 247 7735**"
+    },
+    {
+      "keywords": [
+        "housing",
+        "rent",
+        "landlord",
+        "housing letter",
+        "eviction",
+        "lease",
+        "rental",
+        "housing help",
+        "housing assistance",
+        "accommodation"
+      ],
+      "answer": "We can help you understand **housing-related documents and letters** such as:\n\n🏠 Lease agreements and rental notices.\n📄 Letters from landlords or property management.\n📋 Housing benefit applications.\n\nOur volunteers explain these documents in **simple language** so you know exactly what action to take.\n\n📧 **info@srdfoundation.ca** | 📞 **+1 647 247 7735**"
+    },
+    {
+      "keywords": [
+        "partner",
+        "partnership",
+        "organization",
+        "collaborate",
+        "agency",
+        "ngo",
+        "non profit",
+        "community partner",
+        "work together",
+        "referral partner"
+      ],
+      "answer": "We welcome partnerships with other **community organizations, agencies, and nonprofits**! 🤝\n\nIf your organization supports newcomers or seniors in Ontario and would like to collaborate or refer clients to us, we'd love to connect.\n\n📧 **info@srdfoundation.ca**\n📞 **+1 647 247 7735**\n\nTogether we can build a stronger community support network!"
+    },
+    {
+      "keywords": [
+        "social media",
+        "facebook",
+        "instagram",
+        "twitter",
+        "linkedin",
+        "follow",
+        "newsletter",
+        "updates",
+        "stay updated",
+        "online presence"
+      ],
+      "answer": "To stay connected with SRD Foundation and get the latest updates:\n\n📧 **Email us** to be added to our community updates list: info@srdfoundation.ca\n🌐 **Visit our website**: srdfoundation.ca\n📞 **Call us**: +1 647 247 7735\n\nWe are a volunteer-run organization growing through community — your support and engagement means the world to us! 🍁"
+    }
+  ],
+  "fallbackResponse": "That's a great question! 🧐 I may not have a specific answer for that, but I can help you with information about our services, how to get assistance, volunteering, donating, or how to contact us. Feel free to ask, or reach us directly at info@srdfoundation.ca or call +1 647 247 7735."
+}
