@@ -56,7 +56,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 interface BlogDetailPageProps {
- params: { slug: string }
+  params: Promise<{
+    slug: string;
+  }>;
 }
 
 export function generateStaticParams() {
@@ -64,7 +66,8 @@ export function generateStaticParams() {
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
-  const blog = getBlogBySlug(params.slug);
+  const { slug } = await params;
+  const blog = getBlogBySlug(slug);
 
   if (!blog) {
     notFound();
