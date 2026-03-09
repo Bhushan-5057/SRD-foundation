@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { FiArrowLeft } from "react-icons/fi";
 import { BlogCard } from "@/components/pages/blogs/BlogCard";
 import { BLOGS_DATA, getBlogBySlug } from "@/content/blogsData";
-import type { Metadata } from "next"; 
+import type { Metadata } from "next";
 
 type Props = {
   params: {
@@ -12,7 +12,11 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
   const blog = getBlogBySlug(params.slug);
 
   if (!blog) {
@@ -32,12 +36,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "SRD Foundation",
       images: blog.image
         ? [
-            {
-              url: blog.image,
-              width: 1200,
-              height: 630,
-            },
-          ]
+          {
+            url: blog.image,
+            width: 1200,
+            height: 630,
+          },
+        ]
         : [],
       type: "article",
     },
@@ -64,8 +68,13 @@ export function generateStaticParams() {
   return BLOGS_DATA.map((blog) => ({ slug: blog.slug }));
 }
 
-export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
+export default async function BlogDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const { slug } = params;
+
   const blog = getBlogBySlug(slug);
 
   if (!blog) {
