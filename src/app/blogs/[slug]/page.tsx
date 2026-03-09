@@ -56,9 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 interface BlogDetailPageProps {
-  params: Promise<{
-    slug: string;
-  }>;
+ params: { slug: string }
 }
 
 export function generateStaticParams() {
