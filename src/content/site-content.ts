@@ -64,15 +64,42 @@ export const SITE_CONTENT = {
       "Comfortable and friendly approach",
     ],
   },
-  impact: {
-    heading: "Real Support. Real Impact.",
-    text: "Every interaction creates meaningful change. From attending appointments together to helping someone understand critical documents - your support makes everyday life easier for someone in your community.",
-    stories: [
-      "A volunteer sitting with a senior",
-      "Someone explaining documents",
-      "Walking together to an appointment",
-    ],
-  },
+impact: {
+  heading: "Real Support. Real Impact.",
+  text: "Every interaction creates meaningful change. From attending appointments together to helping someone understand critical documents - your support makes everyday life easier for someone in your community.",
+  stories: [
+    {
+      title: "Companionship for Seniors",
+      description:
+        "A volunteer spent time with a senior who had been feeling isolated. Through regular visits, conversations, and shared activities, the senior regained confidence and emotional well-being.",
+    },
+    {
+      title: "Understanding Important Documents",
+      description:
+        "A newcomer struggled to understand legal and medical paperwork. With patient guidance, they were able to navigate essential systems and feel more secure in their decisions.",
+    },
+    {
+      title: "Support at Appointments",
+      description:
+        "Volunteers accompanied individuals to appointments, ensuring they understood procedures and felt supported throughout the process.",
+    },
+    {
+      title: "Building Confidence",
+      description:
+        "Through small but meaningful interactions, individuals gained confidence in managing their daily lives independently.",
+    },
+    {
+      title: "Creating Community Bonds",
+      description:
+        "People from different backgrounds connected, forming lasting relationships and a stronger sense of belonging.",
+    },
+    {
+      title: "Guidance for Newcomers",
+      description:
+        "Newcomers received step-by-step help navigating unfamiliar systems, making their transition smoother and less stressful.",
+    },
+  ],
+},
   appointmentsSupport: {
     heading: "Appointments & Support",
     text: "From medical appointments to service offices, volunteers help individuals prepare, attend, and communicate with confidence.",

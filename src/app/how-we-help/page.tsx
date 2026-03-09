@@ -1,15 +1,24 @@
+import { FAQSection } from "@/components/common/FAQSection";
 import { HeroSection } from "@/components/common/HeroSection";
 import { HowWeHelpCards } from "@/components/pages/how-we-help/HowWeHelpCards";
 import { InfoSection } from "@/components/pages/how-we-help/InfoSection";
+import { PAGE_FAQS } from "@/content/faqsData";
 import { SITE_CONTENT } from "@/content/site-content";
 import SeniorImage from "../../../public/assets/seniors.jpg";
-import DonateImage from "../../../public/assets/donate.jpg";
-import DonateImage1 from "../../../public/assets/donate2.jpg";
-import DonateImage2 from "../../../public/assets/donate3.jpg";
+import DonateImage from "../../../public/assets/servicepage/service5.jpg";
+import DonateImage1 from "../../../public/assets/homepage/donate2.jpg";
+import DonateImage2 from "../../../public/assets/homepage/donate3.jpg";
 import AboutImage from "../../../public/assets/community.jpg";
 import AppointmentImage from "../../../public/assets/support.jpg";
-import NetworkImage from "../../../public/assets/volunteers3.jpg";
-import WhyImage from "../../../public/assets/heart.jpg";
+import NetworkImage from "../../../public/assets/servicepage/service1.jpg";
+import WhyImage from "../../../public/assets/homepage/heart.jpg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "How We Help",
+  description:
+    "Learn how SRD Foundation supports newcomers, seniors, and families through community programs, guidance, and compassionate assistance.",
+};
 
 export default function HowWeHelpPage() {
   return (
@@ -60,6 +69,13 @@ export default function HowWeHelpPage() {
         bullets={SITE_CONTENT.whyDifferent.bullets}
         imageSrc={WhyImage}
         imageAlt="Volunteer support that makes a difference"
+      />
+
+      <FAQSection
+        sectionLabel={PAGE_FAQS.howWeHelp.sectionLabel}
+        title={PAGE_FAQS.howWeHelp.title}
+        subtitle={PAGE_FAQS.howWeHelp.description}
+        items={PAGE_FAQS.howWeHelp.items}
       />
     </div>
   );

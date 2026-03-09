@@ -2,15 +2,78 @@
 
 import { FormEvent, useState } from "react";
 import { FiMapPin, FiMail, FiPhone, FiClock } from "react-icons/fi";
+import { validateContactField, validateContactForm, ContactFormData, ContactFormErrors, } from "../../../lib/contactValidation"
 
 export function ContactFormSection() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [formData, setFormData] = useState<ContactFormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "volunteer",
+    message: "",
+  });
 
-  const handleSubmit = (e: FormEvent) => {
+  const [errors, setErrors] = useState<ContactFormErrors>({});
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    const error = validateContactField(name, value);
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: error,
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const validationErrors = validateContactForm(formData);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) {
+      return;
+    }
+
     setStatus("loading");
-    // Simulate network request
-    setTimeout(() => setStatus("success"), 1500);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Email failed");
+
+      setStatus("success");
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "volunteer",
+        message: "",
+      });
+
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+      setMessage("Unable to send message.");
+    }
   };
 
   return (
@@ -27,7 +90,6 @@ export function ContactFormSection() {
 
       <div className="overflow-hidden rounded-[2rem] border border-[var(--border-color)] bg-[var(--surface)] shadow-[0_16px_45px_rgb(34_49_27_/_0.08)] dark:shadow-[0_16px_45px_rgb(0_0_0_/_0.35)]">
         <div className="grid lg:grid-cols-[0.9fr_1.4fr]">
-          {/* Left Side: Contact Info */}
           <div
             className="relative flex flex-col gap-8 overflow-hidden bg-gradient-to-br from-[#4f7a34] via-[#436b2e] to-[#324f25] p-6 text-white dark:from-[#2f6f56] dark:to-[#25523f] sm:p-8"
             data-aos="fade-right"
@@ -96,8 +158,6 @@ export function ContactFormSection() {
 
             <div aria-hidden className="pointer-events-none absolute -bottom-16 -right-12 h-44 w-44 rounded-full bg-white/20" />
           </div>
-
-          {/* Right Side: Contact Form */}
           <div className="bg-[var(--surface)] p-6 sm:p-8 lg:p-10" data-aos="fade-left">
             {status === "success" ? (
               <div className="flex min-h-[380px] flex-col items-center justify-center text-center">
@@ -127,10 +187,16 @@ export function ContactFormSection() {
                     <input
                       type="text"
                       id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       required
                       className="mt-2 w-full border-0 border-b border-[var(--border-color)] bg-transparent px-0 pb-2.5 pt-1 text-sm text-[var(--text-primary)] outline-none transition-colors placeholder:text-[var(--text-muted)] focus:border-[var(--brand-primary)]"
                       placeholder="John"
                     />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="lastName" className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--text-muted)]">
@@ -139,10 +205,16 @@ export function ContactFormSection() {
                     <input
                       type="text"
                       id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       required
                       className="mt-2 w-full border-0 border-b border-[var(--border-color)] bg-transparent px-0 pb-2.5 pt-1 text-sm text-[var(--text-primary)] outline-none transition-colors placeholder:text-[var(--text-muted)] focus:border-[var(--brand-primary)]"
                       placeholder="Doe"
                     />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>
+                    )}
                   </div>
                 </div>
 
@@ -153,10 +225,16 @@ export function ContactFormSection() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                     className="mt-2 w-full border-0 border-b border-[var(--border-color)] bg-transparent px-0 pb-2.5 pt-1 text-sm text-[var(--text-primary)] outline-none transition-colors placeholder:text-[var(--text-muted)] focus:border-[var(--brand-primary)]"
                     placeholder="john@example.com"
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  )}
                 </div>
 
                 <div>
@@ -165,7 +243,10 @@ export function ContactFormSection() {
                   </label>
                   <select
                     id="subject"
-                    className="mt-2 w-full border-0 border-b border-[var(--border-color)] bg-transparent px-0 pb-2.5 pt-1 text-sm text-[var(--text-primary)] outline-none transition-colors focus:border-[var(--brand-primary)]"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="mt-2 w-full border-0 border-b border-[var(--border-color)] px-0 pb-2.5 pt-1 text-sm text-[var(--text-primary)] outline-none transition-colors focus:border-[var(--brand-primary)]"
                   >
                     <option value="volunteer">I want to volunteer</option>
                     <option value="help">I need help</option>
@@ -180,13 +261,23 @@ export function ContactFormSection() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     rows={4}
                     className="mt-2 w-full resize-none border-0 border-b border-[var(--border-color)] bg-transparent px-0 pb-2.5 pt-1 text-sm text-[var(--text-primary)] outline-none transition-colors placeholder:text-[var(--text-muted)] focus:border-[var(--brand-primary)]"
                     placeholder="How can we help you?"
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+                  )}
                 </div>
-
+                {status === "error" && (
+                  <div className="rounded-md bg-red-50 border border-red-200 p-3 text-sm text-red-600">
+                    {message}
+                  </div>
+                )}
                 <button
                   type="submit"
                   disabled={status === "loading"}

@@ -3,27 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  FiFacebook,
-  FiInstagram,
-  FiLinkedin,
   FiMail,
   FiPhone,
 } from "react-icons/fi";
-import { FaXTwitter } from "react-icons/fa6";
-import { NAV_ITEMS } from "@/constants/navigation";
+import { FaFacebook, FaWhatsapp, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FOOTER_NAV } from "@/constants/navigation";
 
 const COMPANY_LINKS = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
-  { href: "/community", label: "Community" },
-  { href: "/testimonial", label: "Testimonial" },
-];
-
-const LEGAL_LINKS = [
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms of Use" },
-  { href: "/legal", label: "Legal" },
-  { href: "/sitemap", label: "Site Map" },
+  { href: "/blogs", label: "Blogs" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Footer() {
@@ -55,33 +45,36 @@ export function Footer() {
               </p>
 
               <div className="flex items-center gap-2">
+                <p className="max-w-xs text-sm leading-6 text-[var(--text-muted)]">Follow Us On </p>
                 <Link
                   href="https://facebook.com"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
+                  className="inline-flex items-center justify-center text-[var(--text-muted)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
                   aria-label="Facebook"
                 >
-                  <FiFacebook className="h-4 w-4" />
+                  <FaFacebook className="h-6 w-6" />
                 </Link>
                 <Link
-                  href="https://twitter.com"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
-                  aria-label="Twitter"
+                  href="https://wa.me/16472477735?text=Hello%20I%20want%20to%20know%20more%20about%20your%20services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center text-[var(--text-muted)] transition hover:text-green-500"
+                  aria-label="WhatsApp"
                 >
-                  <FaXTwitter className="h-4 w-4" />
+                  <FaWhatsapp className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://instagram.com"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
+                  className="inline-flex items-center justify-center text-[var(--text-muted)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
                   aria-label="Instagram"
                 >
-                  <FiInstagram className="h-4 w-4" />
+                  <FaInstagram className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://linkedin.com"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
+                  className="inline-flex items-center justify-center text-[var(--text-muted)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
                   aria-label="LinkedIn"
                 >
-                  <FiLinkedin className="h-4 w-4" />
+                  <FaLinkedinIn className="h-6 w-6" />
                 </Link>
               </div>
             </div>
@@ -101,7 +94,7 @@ export function Footer() {
               <div className="space-y-3">
                 <h3 className={columnTitleClass}>Links</h3>
                 <nav className="flex flex-col gap-2">
-                  {NAV_ITEMS.map((item) => (
+                  {FOOTER_NAV.map((item) => (
                     <Link key={item.href} href={item.href} className={linkClass}>
                       {item.label}
                     </Link>
@@ -119,12 +112,12 @@ export function Footer() {
                       width={20}
                       height={14}
                       style={{ height: "auto" }}
-                      className="mt-1 w-6 shrink-0 rounded-sm object-cover"
+                      className="mt-1 w-6 shrink-0 rounded-sm object-cover hover:cursor-pointer"
                     />
                     <span>Suite 600, 3300 Highway 7 West, Vaughan, ON, L4L 1A6, Canada</span>
                   </p>
                   <p className="flex items-center gap-3">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full text-[var(--text-primary)] transition hover:text-[var(--brand-primary)] hover:cursor-pointer">
                       <FiPhone className="h-4 w-4" />
                     </span>
                     <Link href="tel:+16472477735" className="transition-colors hover:text-[var(--brand-primary)]">
@@ -132,7 +125,7 @@ export function Footer() {
                     </Link>
                   </p>
                   <p className="flex items-center gap-3">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full text-[var(--text-primary)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full text-[var(--text-primary)] transition hover:text-[var(--brand-primary)] hover:cursor-pointer">
                       <FiMail className="h-4 w-4" />
                     </span>
                     <Link
@@ -146,16 +139,8 @@ export function Footer() {
               </div>
             </div>
           </div>
-
-          <div className="mt-8 flex flex-col gap-3 border-t border-[var(--border-color)] pt-4 text-xs text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-8 flex flex-col items-center gap-3 border-t border-[var(--border-color)] pt-4 text-xs text-[var(--text-muted)] text-center">
             <p>&copy; {year} SRD Foundation. All rights reserved.</p>
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-              {LEGAL_LINKS.map((item) => (
-                <Link key={item.href} href={item.href} className="transition-colors hover:text-[var(--brand-primary)]">
-                  {item.label}
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
       </div>

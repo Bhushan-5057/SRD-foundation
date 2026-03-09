@@ -58,11 +58,18 @@ export function PageLoader() {
       <div className="relative flex h-24 w-24 items-center justify-center">
         <span className="absolute inset-0 animate-spin rounded-full border-4 border-[var(--brand-primary)] border-t-[var(--brand-secondary)]" />
         <span className="absolute inset-2 animate-spin rounded-full border-2 border-[var(--brand-secondary)] border-b-[var(--brand-primary)] [animation-direction:reverse] [animation-duration:1.1s]" />
-        <div className="relative h-14 w-14 overflow-hidden rounded-full bg-[var(--surface)] shadow-md">
-          <Image src="/assets/srdlogo.png" alt="SRD Foundation logo" fill priority className="object-contain p-1.5" />
+        <div className="relative h-20 w-20 overflow-hidden rounded-full shadow-md">
+          <Image
+            src="/srd.png"
+            alt="SRD Foundation logo"
+            fill
+            sizes="60px"
+            priority
+            className="object-cover"
+          />
         </div>
       </div>
-      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--brand-primary)]">Loading</p>
+      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--brand-primary)]">Loading.....</p>
     </div>
   );
 }

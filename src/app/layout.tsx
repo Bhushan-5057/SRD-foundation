@@ -14,8 +14,16 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "SRD Foundation",
+  title: {
+    default: "SRD Foundation",
+    template: "%s | SRD Foundation",
+  },
   description: "Supporting Newcomers & Seniors",
+  icons:{
+    icon:"/srd.png",
+    shortcut:"/srd.png",
+    apple:"/srd.png"
+  }
 };
 
 export default function RootLayout({

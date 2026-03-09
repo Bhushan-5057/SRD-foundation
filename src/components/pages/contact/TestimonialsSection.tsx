@@ -28,7 +28,7 @@ const TESTIMONIALS: readonly TestimonialItem[] = [
   {
     quote:
       "They prepared me for my office visit, explained every document, and followed up after. I felt confident throughout.",
-    name: "George M.",
+    name: "Mohammed M.",
     role: "Senior Community Member",
     image: TestimonialImage2,
     imageAlt: "Senior receiving community guidance",
