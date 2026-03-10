@@ -10,13 +10,20 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const { firstName, lastName, email, subject, message } = body;
+    
+     if (!firstName || !lastName || !email || !subject || !message) {
+      return NextResponse.json(
+        { success: false, error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
 
     const fullName = `${firstName} ${lastName}`;
 
     // Email to Admin
     await sendMail({
       to: process.env.CONTACT_RECEIVER_EMAIL!,
-      subject: `New Contact Form Message - ${subject}`,
+      subject: `[SRD Foundation] ${subject}`,
       html: adminNotificationTemplate({
         firstName,
         lastName,
@@ -29,7 +36,7 @@ export async function POST(req: Request) {
     // Email to User
     await sendMail({
       to: email,
-      subject: "Thank You for Contacting SRD Foundation",
+      subject: `We received your message about "${subject}"`,
       html: userThankYouTemplate({
         name: fullName,
       }),

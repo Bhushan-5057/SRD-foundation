@@ -9,7 +9,7 @@ export function ContactFormSection() {
     firstName: "",
     lastName: "",
     email: "",
-    subject: "volunteer",
+    subject: "",
     message: "",
   });
 
@@ -65,7 +65,7 @@ export function ContactFormSection() {
         firstName: "",
         lastName: "",
         email: "",
-        subject: "volunteer",
+        subject: "",
         message: "",
       });
 
@@ -248,10 +248,11 @@ export function ContactFormSection() {
                     onChange={handleChange}
                     className="mt-2 w-full border-0 border-b border-[var(--border-color)] px-0 pb-2.5 pt-1 text-sm text-[var(--text-primary)] outline-none transition-colors focus:border-[var(--brand-primary)]"
                   >
-                    <option value="volunteer">I want to become a volunteer</option>
-                    <option value="help">I need help</option>
-                    <option value="donation">Donation inquiry</option>
-                    <option value="other">Other</option>
+                    <option value="">Select a subject</option>
+                    <option value="Volunteer Inquiry">I want to become a volunteer</option>
+                    <option value="Help Request">I need help</option>
+                    <option value="Donation Inquiry">Donation inquiry</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
 
