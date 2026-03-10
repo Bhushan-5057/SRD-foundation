@@ -4,7 +4,7 @@ import { DonationForm } from "@/components/pages/donate/DonationForm";
 import { SITE_CONTENT } from "@/content/site-content";
 import Enjoyimage from "../../../public/assets/enjoy.jpg";
 import Donateimage from "../../../public/assets/servicepage/service5.jpg";
-import Helpingimage from "../../../public/assets/homepage/helping3.jpg";
+import Helpingimage from "../../../public/assets/homepage/helping3.webp";
 import Charityimage from "../../../public/assets/charity2.jpg"; 
 
 export const metadata: Metadata = {

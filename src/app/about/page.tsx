@@ -10,7 +10,7 @@ import AboutImage1 from "../../../public/assets/community.jpg";
 import AboutImage2 from "../../../public/assets/homepage/volunteers4.jpg";
 import AboutImage3 from "../../../public/assets/homepage/volunteers5.jpg";
 import AboutImage4 from "../../../public/assets/volunteers2.jpg";
-import StoryImage from "../../../public/assets/homepage/helping3.jpg";
+import StoryImage from "../../../public/assets/homepage/helping3.webp";
 import WhyImage from "../../../public/assets/homepage/heart.jpg"; 
 
 export const metadata: Metadata = {

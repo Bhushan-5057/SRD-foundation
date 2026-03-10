@@ -34,9 +34,9 @@ export const EVENTS_DATA: EventData[] = [
     dateLabel: "April 18, 2026",
     timeLabel: "10:00 AM - 2:00 PM",
     location: "Vaughan Community Hub, ON",
-    image: "/assets/homepage/helping3.jpg",
+    image: "/assets/homepage/helping3.webp",
     gallery: [
-      "/assets/homepage/helping3.jpg",
+      "/assets/homepage/helping3.webp",
       "/assets/appointment.jpg",
       "/assets/community.jpg",
       "/assets/homepage/volunteers.jpg",

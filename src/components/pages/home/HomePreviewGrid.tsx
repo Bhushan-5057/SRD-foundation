@@ -1,5 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
-import HowWeHelpImage from "../../../../public/assets/homepage/helping3.jpg";
+import HowWeHelpImage from "../../../../public/assets/homepage/helping3.webp";
 import ImpactImage from "../../../../public/assets/homepage/volunteers.jpg";
 import DonateImage from "../../../../public/assets/homepage/donate2.jpg";
 import VolunteerImage from "../../../../public/assets/homepage/helping2.jpg";
