@@ -244,7 +244,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-50 flex h-full w-72 flex-col border-l border-[var(--border-color)] bg-[var(--surface)] p-5 shadow-2xl transition-transform duration-300 md:hidden ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed right-0 top-0 z-50 flex h-full w-[min(90vw,18rem)] flex-col overflow-y-auto border-l border-[var(--border-color)] bg-[var(--surface)] p-5 pb-8 shadow-2xl transition-transform duration-300 md:hidden ${isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <div className="mb-6 flex items-center justify-between">
