@@ -214,7 +214,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           </Link>
 
           <div className="flex items-center gap-2 md:gap-3">
-            <nav className="hidden items-center gap-1 md:flex">{NAV_ITEMS.map(renderDesktopItem)}</nav>
+            <nav className="hidden items-center gap-1 lg:flex">{NAV_ITEMS.map(renderDesktopItem)}</nav>
 
             <button
               type="button"
@@ -228,7 +228,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
             <button
               type="button"
               onClick={() => setIsMenuOpen(true)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:bg-[var(--surface-soft)] md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-color)] text-[var(--text-primary)] transition hover:bg-[var(--surface-soft)] lg:hidden"
               aria-label="Open menu"
             >
               <FiMenu className="h-5 w-5" />
@@ -238,13 +238,13 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       </header>
 
       <div
-        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 md:hidden ${isMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 lg:hidden ${isMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
           }`}
         onClick={() => setIsMenuOpen(false)}
       />
 
       <aside
-        className={`fixed right-0 top-0 z-50 flex h-full w-[min(90vw,18rem)] flex-col overflow-y-auto border-l border-[var(--border-color)] bg-[var(--surface)] p-5 pb-8 shadow-2xl transition-transform duration-300 md:hidden ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed right-0 top-0 z-50 flex h-full w-[min(90vw,18rem)] flex-col overflow-y-auto border-l border-[var(--border-color)] bg-[var(--surface)] p-5 pb-8 shadow-2xl transition-transform duration-300 lg:hidden ${isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <div className="mb-6 flex items-center justify-between">

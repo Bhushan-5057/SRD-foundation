@@ -157,7 +157,7 @@ export function HeroSection({
           ) : null}
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:auto-rows-[120px]">
+        <div className="hidden gap-4 lg:grid lg:grid-cols-2 lg:auto-rows-[120px]">
           {slots.map((slot, index) => {
             const media = slot.src ? (
               <Image
