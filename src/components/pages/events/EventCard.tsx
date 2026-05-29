@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight, FiCalendar, FiClock, FiMapPin } from "react-icons/fi";
-import type { EventData } from "@/content/eventsData";
+import type { EventData } from "../../../content/eventsData";
 
 interface EventCardProps {
   event: EventData;

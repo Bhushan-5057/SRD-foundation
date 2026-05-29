@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import type { IconType } from "react-icons";
 import { FiCheck, FiChevronRight } from "react-icons/fi";
-import { renderServiceTitleWithAccent } from "@/components/pages/services/ServiceTitleAccent";
+import { renderServiceTitleWithAccent } from "./ServiceTitleAccent";
 
 interface ServiceHeroProps {
   slug: string;

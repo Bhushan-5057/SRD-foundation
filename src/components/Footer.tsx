@@ -7,7 +7,7 @@ import {
   FiPhone,
 } from "react-icons/fi";
 import { FaFacebook, FaWhatsapp, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FOOTER_NAV } from "@/constants/navigation";
+import { FOOTER_NAV } from "../constants/navigation";
 
 const COMPANY_LINKS = [
   { href: "/about", label: "About Us" },

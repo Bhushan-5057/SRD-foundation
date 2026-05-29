@@ -3,20 +3,20 @@ import { notFound } from "next/navigation";
 import type { IconType } from "react-icons";
 import * as Icons from "react-icons/fi";
 
-import { ServiceCard } from "@/components/pages/services/ServiceCard";
+import { ServiceCard } from "../../../components/pages/services/ServiceCard";
 import {
   ServiceAudienceSection,
   ServiceHero,
   ServiceOfferGrid,
   ServiceSplitSection,
   ServiceStepsSection,
-} from "@/components/pages/services/ServiceDetailSections";
+} from "../../../components/pages/services/ServiceDetailSections";
 import {
   type ServiceSection,
   SERVICES_DATA,
   SERVICE_SECTION_MEDIA,
   getServiceBySlug,
-} from "@/content/servicesData";
+} from "../../../content/servicesData";
 
 type PageParams = { slug: string };
 type ServicePageProps = { params: Promise<PageParams> };

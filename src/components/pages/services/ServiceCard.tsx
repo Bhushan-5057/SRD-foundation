@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
-import type { ServiceData } from "@/content/servicesData";
-import { ServiceIcon } from "@/components/common/ServiceIcon";
-import { renderServiceTitleWithAccent } from "@/components/pages/services/ServiceTitleAccent";
+import type { ServiceData } from "../../../content/servicesData";
+import { ServiceIcon } from "../../common/ServiceIcon";
+import { renderServiceTitleWithAccent } from "./ServiceTitleAccent";
 
 interface ServiceCardProps {
   service: ServiceData;

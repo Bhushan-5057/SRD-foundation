@@ -1,9 +1,9 @@
 import { type Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { Chatbot } from "@/components/common/Chatbot";
-import { AOSInit } from "@/components/common/AOSInit";
-import { PageLoader } from "@/components/common/PageLoader";
-import { SiteShell } from "@/components/SiteShell";
+import { Chatbot } from "../components/common/Chatbot";
+import { AOSInit } from "../components/common/AOSInit";
+import { PageLoader } from "../components/common/PageLoader";
+import { SiteShell } from "../components/SiteShell";
 import "./globals.css";
 import { Providers } from "./providers";
 

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft, FiCalendar, FiClock, FiMapPin } from "react-icons/fi";
-import { HeroSection } from "@/components/common/HeroSection";
-import { EventCard } from "@/components/pages/events/EventCard";
-import { EVENTS_DATA, getEventBySlug } from "@/content/eventsData";
+import { HeroSection } from "../../../components/common/HeroSection";
+import { EventCard } from "../../../components/pages/events/EventCard";
+import { EVENTS_DATA, getEventBySlug } from "../../../content/eventsData";
 
 type EventPageParams = { slug: string };
 type EventPageProps = { params: Promise<EventPageParams> };

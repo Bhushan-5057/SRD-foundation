@@ -1,5 +1,5 @@
-import { SERVICES_DATA } from "@/content/servicesData";
-import { EVENTS_DATA } from "@/content/eventsData";
+import { SERVICES_DATA } from "../content/servicesData";
+import { EVENTS_DATA } from "../content/eventsData";
 
 export interface NavChildItem {
   href: string;

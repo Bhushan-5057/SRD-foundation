@@ -1,7 +1,7 @@
-import { HeroSection } from "@/components/common/HeroSection";
+import { HeroSection } from "../../components/common/HeroSection";
 import { Metadata } from "next";
-import { DonationForm } from "@/components/pages/donate/DonationForm";
-import { SITE_CONTENT } from "@/content/site-content";
+import { DonationForm } from "../../components/pages/donate/DonationForm";
+import { SITE_CONTENT } from "../../content/site-content";
 import Enjoyimage from "../../../public/assets/enjoy.jpg";
 import Donateimage from "../../../public/assets/servicepage/service5.jpg";
 import Helpingimage from "../../../public/assets/homepage/helping3.webp";

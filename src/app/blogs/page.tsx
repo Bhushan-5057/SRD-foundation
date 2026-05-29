@@ -1,7 +1,7 @@
-import { HeroSection } from "@/components/common/HeroSection";
+import { HeroSection } from "../../components/common/HeroSection";
 import { Metadata } from "next";
-import { BlogCard } from "@/components/pages/blogs/BlogCard";
-import { BLOGS_DATA } from "@/content/blogsData";
+import { BlogCard } from "../../components/pages/blogs/BlogCard";
+import { BLOGS_DATA } from "../../content/blogsData";
 import BlogImage1 from "../../../public/assets/community2.jpg";
 import BlogImage2 from "../../../public/assets/homepage/volunteers.jpg";
 import BlogImage3 from "../../../public/assets/community.jpg";

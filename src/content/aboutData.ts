@@ -1,4 +1,4 @@
-import type { ServiceIconKey } from "@/content/servicesData";
+import type { ServiceIconKey } from "./servicesData";
 
 export interface AboutTextBlock {
   title: string;

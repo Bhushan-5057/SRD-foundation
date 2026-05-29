@@ -1,6 +1,6 @@
 import type { IconType } from "react-icons";
 import { FiBookOpen, FiHeart, FiMapPin, FiUsers } from "react-icons/fi";
-import type { ServiceIconKey } from "@/content/servicesData";
+import type { ServiceIconKey } from "../../content/servicesData";
 
 const ICON_MAP: Record<ServiceIconKey, IconType> = {
   settlement: FiMapPin,

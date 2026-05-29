@@ -1,4 +1,4 @@
-import { GridCardsSkeleton } from "@/components/common/GridCardsSkeleton";
+import { GridCardsSkeleton } from "../../components/common/GridCardsSkeleton";
 
 export default function ServicesLoading() {
   return (

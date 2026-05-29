@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { HeroSection } from "@/components/common/HeroSection";
-import { InfoSection } from "@/components/pages/impact/InfoSection";
-import { SITE_CONTENT } from "@/content/site-content";
+import { HeroSection } from "../../components/common/HeroSection";
+import { InfoSection } from "../../components/pages/impact/InfoSection";
+import { SITE_CONTENT } from "../../content/site-content";
 import DonateImage from "../../../public/assets/homepage/donate3.jpg";
 import EnjoyImage from "../../../public/assets/enjoy2.jpg";
 import Volunteers from "../../../public/assets/homepage/volunteers.jpg";

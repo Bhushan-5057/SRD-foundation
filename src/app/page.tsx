@@ -1,12 +1,12 @@
-import { HeroSection } from "@/components/common/HeroSection";
+import { HeroSection } from "../components/common/HeroSection";
 import Link from "next/link";
-import { BlogCard } from "@/components/pages/blogs/BlogCard";
-import { HomePreviewGrid } from "@/components/pages/home/HomePreviewGrid";
-import { InfoSection } from "@/components/pages/home/InfoSection";
-import { ServiceCard } from "@/components/pages/services/ServiceCard";
-import { BLOGS_DATA } from "@/content/blogsData";
-import { SERVICES_DATA } from "@/content/servicesData";
-import { SITE_CONTENT } from "@/content/site-content";
+import { BlogCard } from "../components/pages/blogs/BlogCard";
+import { HomePreviewGrid } from "../components/pages/home/HomePreviewGrid";
+import { InfoSection } from "../components/pages/home/InfoSection";
+import { ServiceCard } from "../components/pages/services/ServiceCard";
+import { BLOGS_DATA } from "../content/blogsData";
+import { SERVICES_DATA } from "../content/servicesData";
+import { SITE_CONTENT } from "../content/site-content";
 import Seniors from "../../public/assets/homepage/helping4.jpg";
 import Charity from "../../public/assets/homepage/volunteers5.jpg";
 import Heart from "../../public/assets/homepage/heart.jpg";
@@ -15,7 +15,7 @@ import AboutImage from "../../public/assets/community.jpg";
 import ImpactImage from "../../public/assets/homepage/volunteers.jpg";
 import DonationImage from "../../public/assets/homepage/donate3.jpg";
 import VolunteerImage from "../../public/assets/homepage/volunteers4.jpg";
-import { TestimonialsSection } from "@/components/pages/contact/TestimonialsSection";
+import { TestimonialsSection } from "../components/pages/contact/TestimonialsSection";
 
 export default function HomePage() {
   const featuredBlogs = BLOGS_DATA.slice(0, 4);

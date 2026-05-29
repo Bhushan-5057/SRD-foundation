@@ -1,9 +1,9 @@
-import { HeroSection } from "@/components/common/HeroSection";
+import { HeroSection } from "../../components/common/HeroSection";
 import { Metadata } from "next";
-import { ContactFormSection } from "@/components/pages/contact/ContactFormSection";
-import { InfoSection } from "@/components/pages/contact/InfoSection";
-import { TestimonialsSection } from "@/components/pages/contact/TestimonialsSection";
-import { SITE_CONTENT } from "@/content/site-content";
+import { ContactFormSection } from "../../components/pages/contact/ContactFormSection";
+import { InfoSection } from "../../components/pages/contact/InfoSection";
+import { TestimonialsSection } from "../../components/pages/contact/TestimonialsSection";
+import { SITE_CONTENT } from "../../content/site-content";
 import volunteerImage from "../../../public/assets/homepage/volunteers5.jpg";
 import volunteerImage1 from "../../../public/assets/homepage/volunteers.jpg";
 import volunteerImage2 from "../../../public/assets/volunteers2.jpg";

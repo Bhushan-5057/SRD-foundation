@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft } from "react-icons/fi";
-import { BlogCard } from "@/components/pages/blogs/BlogCard";
-import { BLOGS_DATA, getBlogBySlug } from "@/content/blogsData";
+import { BlogCard } from "../../../components/pages/blogs/BlogCard";
+import { BLOGS_DATA, getBlogBySlug } from "../../../content/blogsData";
 import type { Metadata } from "next";
 
 export async function generateMetadata({

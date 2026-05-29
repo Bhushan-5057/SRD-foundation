@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { FiChevronDown, FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
-import { NAV_ITEMS, type NavItem } from "@/constants/navigation";
+import { NAV_ITEMS, type NavItem } from "../constants/navigation";
 
 interface NavbarProps {
   theme: "light" | "dark";

@@ -1,8 +1,8 @@
-import { FAQSection } from "@/components/common/FAQSection";
-import { HeroSection } from "@/components/common/HeroSection";
-import { EventCard } from "@/components/pages/events/EventCard";
-import { EVENTS_DATA } from "@/content/eventsData";
-import { PAGE_FAQS } from "@/content/faqsData";
+import { FAQSection } from "../../components/common/FAQSection";
+import { HeroSection } from "../../components/common/HeroSection";
+import { EventCard } from "../../components/pages/events/EventCard";
+import { EVENTS_DATA } from "../../content/eventsData";
+import { PAGE_FAQS } from "../../content/faqsData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,9 +1,9 @@
-import { FAQSection } from "@/components/common/FAQSection";
-import { HeroSection } from "@/components/common/HeroSection";
-import { HowWeHelpCards } from "@/components/pages/how-we-help/HowWeHelpCards";
-import { InfoSection } from "@/components/pages/how-we-help/InfoSection";
-import { PAGE_FAQS } from "@/content/faqsData";
-import { SITE_CONTENT } from "@/content/site-content";
+import { FAQSection } from "../../components/common/FAQSection";
+import { HeroSection } from "../../components/common/HeroSection";
+import { HowWeHelpCards } from "../../components/pages/how-we-help/HowWeHelpCards";
+import { InfoSection } from "../../components/pages/how-we-help/InfoSection";
+import { PAGE_FAQS } from "../../content/faqsData";
+import { SITE_CONTENT } from "../../content/site-content";
 import SeniorImage from "../../../public/assets/seniors.jpg";
 import DonateImage from "../../../public/assets/servicepage/service5.jpg";
 import DonateImage1 from "../../../public/assets/homepage/donate2.jpg";

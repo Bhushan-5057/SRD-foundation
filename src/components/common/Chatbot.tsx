@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import type { IconType } from "react-icons";
 import { FiMessageCircle, FiSend, FiX } from "react-icons/fi";
-import chatbotData from "@/content/chatbot-data.json";
+import chatbotData from "../../content/chatbot-data.json";
 
 type ChatActionType = "scroll" | "link";
 

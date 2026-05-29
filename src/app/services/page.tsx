@@ -1,8 +1,8 @@
-import { FAQSection } from "@/components/common/FAQSection";
-import { HeroSection } from "@/components/common/HeroSection";
-import { ServiceCard } from "@/components/pages/services/ServiceCard";
-import { PAGE_FAQS } from "@/content/faqsData";
-import { SERVICES_DATA } from "@/content/servicesData";
+import { FAQSection } from "../../components/common/FAQSection";
+import { HeroSection } from "../../components/common/HeroSection";
+import { ServiceCard } from "../../components/pages/services/ServiceCard";
+import { PAGE_FAQS } from "../../content/faqsData";
+import { SERVICES_DATA } from "../../content/servicesData";
 import ServiceImage from "../../../public/assets/servicepage/service2.jpg";
 import ServiceImage1 from "../../../public/assets/servicepage/service1.jpg";
 import ServiceImage2 from "../../../public/assets/servicepage/service3.jpg";

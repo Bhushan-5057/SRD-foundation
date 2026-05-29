@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Footer } from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
+import { Footer } from "./Footer";
+import { Navbar } from "./Navbar";
 
 const THEME_KEY = "srd-theme";
 

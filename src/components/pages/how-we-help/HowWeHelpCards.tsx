@@ -1,5 +1,5 @@
 import { FiFileText, FiHeart, FiMapPin, FiUsers } from "react-icons/fi";
-import type { HelpCardContent } from "@/content/site-content";
+import type { HelpCardContent } from "../../../content/site-content";
 
 interface HowWeHelpCardsProps {
   title: string;

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
-import type { BlogPostData } from "@/content/blogsData";
+import type { BlogPostData } from "../../../content/blogsData";
 
 interface BlogCardProps {
   blog: BlogPostData;

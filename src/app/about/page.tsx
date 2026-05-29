@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import { FiCompass, FiHeart, FiShield, FiUsers, FiZap,FiTrendingUp } from "react-icons/fi";
-import { FAQSection } from "@/components/common/FAQSection";
-import { HeroSection } from "@/components/common/HeroSection";
-import { ServiceIcon } from "@/components/common/ServiceIcon";
-import { ABOUT_DATA } from "@/content/aboutData";
-import { PAGE_FAQS } from "@/content/faqsData";
+import { FAQSection } from "../../components/common/FAQSection";
+import { HeroSection } from "../../components/common/HeroSection";
+import { ServiceIcon } from "../../components/common/ServiceIcon";
+import { ABOUT_DATA } from "../../content/aboutData";
+import { PAGE_FAQS } from "../../content/faqsData";
 import AboutImage1 from "../../../public/assets/community.jpg";
 import AboutImage2 from "../../../public/assets/homepage/volunteers4.jpg";
 import AboutImage3 from "../../../public/assets/homepage/volunteers5.jpg";
