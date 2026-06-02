@@ -171,9 +171,8 @@ export default function DonatePage() {
           {/* RIGHT STATS */}
           <div className="grid grid-cols-2 gap-4">
             {[
-              { value: "500+", label: "Lives Supported" },
-              { value: "120+", label: "Active Volunteers" },
-              { value: "300+", label: "Appointments Assisted" },
+              { value: "50+", label: "Lives Supported" },
+              { value: "60+", label: "Appointments Assisted" },
               { value: "100%", label: "Community Focused" },
             ].map((item, i) => (
               <div

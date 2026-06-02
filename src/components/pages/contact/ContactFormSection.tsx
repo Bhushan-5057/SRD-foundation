@@ -57,7 +57,10 @@ export function ContactFormSection() {
         body: JSON.stringify(formData),
       });
 
-      if (!res.ok) throw new Error("Email failed");
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error ?? "Email failed");
+      }
 
       setStatus("success");
 
@@ -72,7 +75,7 @@ export function ContactFormSection() {
     } catch (error) {
       console.error(error);
       setStatus("error");
-      setMessage("Unable to send message.");
+      setMessage(error instanceof Error ? error.message : "Unable to send message.");
     }
   };
 
@@ -109,7 +112,7 @@ export function ContactFormSection() {
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-white">Phone Number</h4>
-                  <p className="mt-1 text-sm text-white/90">+1 (416) 555-0198</p>
+                  <p className="mt-1 text-sm text-white/90">+1 (647) 247 7735</p>
                 </div>
               </div>
 
@@ -120,9 +123,7 @@ export function ContactFormSection() {
                 <div>
                   <h4 className="text-sm font-semibold text-white">Email Address</h4>
                   <p className="mt-1 text-sm text-white/90">
-                    support@srdfoundation.org
-                    <br />
-                    volunteer@srdfoundation.org
+                    info@srdfoundation.ca
                   </p>
                 </div>
               </div>
@@ -134,9 +135,9 @@ export function ContactFormSection() {
                 <div>
                   <h4 className="text-sm font-semibold text-white">Our Location</h4>
                   <p className="mt-1 text-sm text-white/90">
-                    123 Community Drive
+                    Suite 600, 3300 Highway 7
                     <br />
-                    Toronto, ON M2N 5N2
+                    West, Vaughan, ON, L4L 1A6,Canada
                   </p>
                 </div>
               </div>

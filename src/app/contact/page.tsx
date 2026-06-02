@@ -26,7 +26,7 @@ export default function ContactPage() {
         highlightText="Volunteer"
         description={SITE_CONTENT.volunteer.text}
         primaryAction={SITE_CONTENT.volunteer.action}
-        secondaryAction={{ href: "mailto:support@srdfoundation.org", label: "Email Support" }}
+        secondaryAction={{ href: "mailto:info@srdfoundation.ca", label: "Email Support" }}
         tags={["Volunteer", "Partnerships", "Community Support"]}
         imageSlots={[
           { src: volunteerImage2, alt: "Volunteer helping a senior" },

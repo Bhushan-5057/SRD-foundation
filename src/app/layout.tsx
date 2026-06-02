@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   },
   description: "Supporting Newcomers & Seniors",
   icons:{
-    icon:"/srd.png",
-    shortcut:"/srd.png",
-    apple:"/srd.png"
+    icon:"/srd.svg",
+    shortcut:"/srd.svg",
+    apple:"/srd.svg"
   }
 };
 

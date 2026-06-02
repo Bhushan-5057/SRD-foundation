@@ -94,12 +94,11 @@ export default function ImpactPage() {
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] sm:text-3xl text-center">
           Our Impact in Numbers
         </h2>
-        <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4 text-center">
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3 text-center">
           {[
-            { value: "500+", label: "People Helped" },
-            { value: "120+", label: "Active Volunteers" },
-            { value: "300+", label: "Appointments Assisted" },
-            { value: "95%", label: "Positive Feedback" },
+            { value: "50+", label: "People Helped" },
+            { value: "60+", label: "Appointments Assisted" },
+            { value: "100%", label: "Community Focused" },
           ].map((item) => (
             <div key={item.label}>
               <p className="text-2xl font-bold text-[var(--brand-primary)]">

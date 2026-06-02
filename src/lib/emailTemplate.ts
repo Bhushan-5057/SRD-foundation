@@ -1,8 +1,21 @@
+const websiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://srdfoundation.ca";
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
 export const userThankYouTemplate = ({
   name,
 }: {
   name: string;
-}) => `
+}) => {
+  const safeName = escapeHtml(name);
+
+  return `
 <div style="background:#ffffff;padding:35px 18px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
 
 <div style="max-width:620px;margin:auto;background:#0F1510;border-radius:14px;padding:35px 30px;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
@@ -20,7 +33,7 @@ Thank You for Contacting Us 🌱
 </h2>
 
 <p style="font-size:13px;color:#e7efdf;margin:10px 0">
-Hello <strong>${name}</strong>,
+Hello <strong>${safeName}</strong>,
 </p>
 
 <p style="font-size:13px;color:#e7efdf;margin:10px 0">
@@ -40,7 +53,7 @@ If your message is urgent, feel free to reply directly to this email.
 <div style="text-align:center;margin:28px 0">
 
 <a 
-href="https://srd-foundation.vercel.app/"
+href="${websiteUrl}"
 style="
 background:#2e7d32;
 color:#ffffff;
@@ -100,7 +113,8 @@ SRD Foundation • Building a better community through compassion and action.
 
 </div>
 </div>
-`; 
+`;
+};
 
 export const adminNotificationTemplate = ({
   firstName,
@@ -114,7 +128,14 @@ export const adminNotificationTemplate = ({
   email: string;
   subject: string;
   message: string;
-}) => `
+}) => {
+  const safeFirstName = escapeHtml(firstName);
+  const safeLastName = escapeHtml(lastName);
+  const safeEmail = escapeHtml(email);
+  const safeSubject = escapeHtml(subject);
+  const safeMessage = escapeHtml(message).replace(/\n/g, "<br/>");
+
+  return `
 <div style="background:#f4f7f4;padding:40px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
 
 <div style="max-width:620px;margin:auto;background:#0F1510;border-radius:14px;padding:40px 35px">
@@ -137,16 +158,16 @@ A new message has been submitted through the website contact form.
 
 <div style="margin-top:25px;font-size:14px;color:#e7efdf">
 
-<p><strong>Name:</strong> ${firstName} ${lastName}</p>
+<p><strong>Name:</strong> ${safeFirstName} ${safeLastName}</p>
 
-<p><strong>Email:</strong> ${email}</p>
+<p><strong>Email:</strong> ${safeEmail}</p>
 
-<p><strong>Subject:</strong> ${subject}</p>
+<p><strong>Subject:</strong> ${safeSubject}</p>
 
 <p style="margin-top:15px"><strong>Message:</strong></p>
 
-<div style="color:#e39054 background:#f6f8f6;padding:18px;border-radius:8px;border-left:4px solid #2e7d32">
-${message}
+<div style="color:#e39054;background:#f6f8f6;padding:18px;border-radius:8px;border-left:4px solid #2e7d32">
+${safeMessage}
 </div>
 
 </div>
@@ -160,3 +181,4 @@ This message was submitted via the SRD Foundation website contact form.
 </div>
 </div>
 `;
+};

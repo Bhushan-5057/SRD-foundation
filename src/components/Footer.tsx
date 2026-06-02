@@ -121,7 +121,7 @@ export function Footer() {
                       <FiPhone className="h-4 w-4" />
                     </span>
                     <Link href="tel:+16472477735" className="transition-colors hover:text-[var(--brand-primary)]">
-                      +1 647 247 7735
+                      +1 (647) 247 7735
                     </Link>
                   </p>
                   <p className="flex items-center gap-3">
@@ -129,10 +129,10 @@ export function Footer() {
                       <FiMail className="h-4 w-4" />
                     </span>
                     <Link
-                      href="mailto:support@srdfoundation.org"
+                      href="mailto:info@srdfoundation.ca"
                       className="transition-colors hover:text-[var(--brand-primary)]"
                     >
-                      support@srdfoundation.org
+                      info@srdfoundation.ca
                     </Link>
                   </p>
                 </div>
