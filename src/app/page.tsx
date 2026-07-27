@@ -1,156 +1,128 @@
-import { HeroSection } from "../components/common/HeroSection";
-import Link from "next/link";
-import { BlogCard } from "../components/pages/blogs/BlogCard";
-import { HomePreviewGrid } from "../components/pages/home/HomePreviewGrid";
-import { InfoSection } from "../components/pages/home/InfoSection";
-import { ServiceCard } from "../components/pages/services/ServiceCard";
-import { BLOGS_DATA } from "../content/blogsData";
-import { SERVICES_DATA } from "../content/servicesData";
-import { SITE_CONTENT } from "../content/site-content";
-import Seniors from "../../public/assets/homepage/helping4.jpg";
-import Charity from "../../public/assets/homepage/volunteers5.jpg";
-import Heart from "../../public/assets/homepage/heart.jpg";
-import LoveImage from "../../public/assets/homepage/Love.jpg";
-import AboutImage from "../../public/assets/community.jpg";
-import ImpactImage from "../../public/assets/homepage/volunteers.jpg";
-import DonationImage from "../../public/assets/homepage/donate3.jpg";
-import VolunteerImage from "../../public/assets/homepage/volunteers4.jpg";
-import { TestimonialsSection } from "../components/pages/contact/TestimonialsSection";
+import { FiHeart, FiHome, FiUsers } from "react-icons/fi";
+import { CtaBannerSection } from "../components/common/CtaBannerSection";
+import { HomeHeroSection } from "../components/common/HomeHeroSection";
+import { IconFeatureCards } from "../components/common/IconFeatureCards";
+import { SplitContentSection } from "../components/common/SplitContentSection";
+import { HOME_PAGE_CONTENT } from "../content/homePageContent";
 
 export default function HomePage() {
-  const featuredBlogs = BLOGS_DATA.slice(0, 4);
+  const content = HOME_PAGE_CONTENT;
 
   return (
-    <div className="space-y-8 md:space-y-10">
-      <HeroSection
-        sectionLabel="SRD Foundation"
-        title={SITE_CONTENT.hero.heading}
-        highlightText="Human"
-        description={SITE_CONTENT.hero.subtext}
-        primaryAction={SITE_CONTENT.hero.actions[0]}
-        secondaryAction={SITE_CONTENT.hero.actions[1]}
-        extraActions={[SITE_CONTENT.hero.actions[2]]}
-        tags={SITE_CONTENT.hero.tags}
-        imageSlots={[
-          { src: Seniors, alt: "Hero image slot 1" },
-          { src: Charity, alt: "Hero image slot 2" },
-          { src: Heart, alt: "Hero image slot 3" },
-          { src: LoveImage, alt: "Hero image slot 4" },
+    <div className="space-y-10 md:space-y-14">
+      <HomeHeroSection
+        eyebrow={content.hero.eyebrow}
+        title={content.hero.title}
+        description={content.hero.description}
+        primaryAction={content.hero.primaryAction}
+        slides={[...content.hero.slides]}
+      />
+
+      <SplitContentSection
+        badge={content.about.badge}
+        heading={content.about.heading}
+        paragraphs={[...content.about.paragraphs]}
+        secondaryHeading={content.about.missionHeading}
+        secondaryText={content.about.missionText}
+        action={content.about.action}
+        imageSrc={content.about.imageSrc}
+        imageAlt="About SRD Foundation"
+        imageLabel="About section image"
+        imageAspect="split"
+        reverse
+      />
+
+      <SplitContentSection
+        heading={content.whoWeAre.heading}
+        text={content.whoWeAre.text}
+        imageSrc={content.whoWeAre.imageSrc}
+        imageAlt="SRD Foundation volunteers and advocates"
+        imageLabel="Who we are image"
+        imageAspect="split"
+      />
+
+      <IconFeatureCards
+        heading={content.whatWeOffer.heading}
+        description={content.whatWeOffer.description}
+        cards={[
+          {
+            title: content.whatWeOffer.cards[0].title,
+            description: content.whatWeOffer.cards[0].description,
+            icon: FiHeart,
+          },
+          {
+            title: content.whatWeOffer.cards[1].title,
+            description: content.whatWeOffer.cards[1].description,
+            icon: FiHome,
+          },
+          {
+            title: content.whatWeOffer.cards[2].title,
+            description: content.whatWeOffer.cards[2].description,
+            icon: FiUsers,
+          },
         ]}
       />
 
-      <div className="py-8 text-center sm:py-12" data-aos="zoom-in">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-secondary)]">
-          Community Support
-        </p>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--text-primary)] sm:text-4xl">
-          How We Help
-        </h2>
-        <div className="mx-auto mt-6 h-1.5 w-16 rounded-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] opacity-80" />
-      </div>
-
-      <InfoSection
-        heading={SITE_CONTENT.about.heading}
-        text={SITE_CONTENT.about.text}
-        imageSrc={AboutImage}
-        imageAlt="Community support volunteers"
-        action={{ href: "/how-we-help", label: "Read How We Help" }}
-        compact
-        priority
+      <SplitContentSection
+        heading={content.impact.heading}
+        text={content.impact.text}
+        action={content.impact.action}
+        imageSrc={content.impact.imageSrc}
+        imageAlt="Impact through compassion"
+        imageLabel="Impact section image"
+        imageAspect="split"
       />
 
-      <section className="space-y-5">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-secondary)]">Services</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-[var(--text-primary)] sm:text-4xl">
-              Programs designed around real community needs
-            </h2>
-          </div>
-          <Link
-            href="/services"
-            className="inline-flex items-center justify-center rounded-full border border-[var(--border-color)] bg-[var(--surface)] px-5 py-2.5 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-soft)]"
-          >
-            View All Services
-          </Link>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
-          {SERVICES_DATA.map((service, index) => (
-            <div key={service.slug} data-aos="fade-up" data-aos-delay={index * 100}>
-              <ServiceCard service={service} />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <HomePreviewGrid items={SITE_CONTENT.homePreviews} />
-
-      <div className="py-8 text-center sm:py-12" data-aos="zoom-in">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-secondary)]">
-          Real Stories, Real Support
-        </p>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--text-primary)] sm:text-4xl">
-          Our Impact in the Community
-        </h2>
-        <div className="mx-auto mt-6 h-1.5 w-16 rounded-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] opacity-80" />
-      </div>
-
-      <InfoSection
-        heading={SITE_CONTENT.impact.heading}
-        text={SITE_CONTENT.impact.text}
-        imageSrc={ImpactImage}
-        imageAlt="Community impact moments"
-        action={{ href: "/impact", label: "View Impact" }}
+      <SplitContentSection
+        heading={content.elders.heading}
+        text={content.elders.text}
+        action={content.elders.action}
+        imageSrc={content.elders.imageSrc}
+        imageAlt="Supporting elders"
+        imageLabel="Elders support image"
+        imageAspect="split"
         reverse
-        compact
       />
 
-      <InfoSection
-        heading={SITE_CONTENT.donation.heading}
-        text={SITE_CONTENT.donation.text}
-        imageSrc={DonationImage}
-        imageAlt="Donation support for local families"
-        action={{ href: "/donate", label: "Go to Donate" }}
-        compact
+      <CtaBannerSection
+        heading={content.getInvolved.heading}
+        description={content.getInvolved.text}
+        action={content.getInvolved.action}
+        imageSrc={content.getInvolved.imageSrc}
+        imageAlt="Get involved background"
+        imageAspect="banner"
       />
 
-      <InfoSection
-        heading={SITE_CONTENT.volunteer.heading}
-        text={SITE_CONTENT.volunteer.text}
-        imageSrc={VolunteerImage}
-        imageAlt="Volunteer support in action"
-        action={SITE_CONTENT.volunteer.action}
+      <SplitContentSection
+        heading={content.soulFood.heading}
+        text={content.soulFood.text}
+        action={content.soulFood.action}
+        imageSrc={content.soulFood.imageSrc}
+        imageAlt="Soul Food for Community Hope"
+        imageLabel="Seniors program image"
+        imageAspect="split"
         reverse
-        compact
       />
 
-      <section className="space-y-5">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-secondary)]">Blogs</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-[var(--text-primary)] sm:text-4xl">
-              Latest community insights
-            </h2>
-          </div>
-          <Link
-            href="/blogs"
-            className="inline-flex items-center justify-center rounded-full bg-[var(--brand-primary)] px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-110"
-          >
-            View All Blogs
-          </Link>
-        </div>
+      <SplitContentSection
+        badge={content.donation.badge}
+        heading={content.donation.heading}
+        text={content.donation.text}
+        action={content.donation.action}
+        imageSrc={content.donation.imageSrc}
+        imageAlt="Support the mission"
+        imageLabel="Donation section image"
+        imageAspect="split"
+      />
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {featuredBlogs.map((blog, index) => (
-            <div key={blog.slug} data-aos="fade-up" data-aos-delay={index * 100}>
-              <BlogCard blog={blog} />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <TestimonialsSection />
+      <CtaBannerSection
+        heading={content.together.heading}
+        description={content.together.text}
+        action={content.together.action}
+        imageSrc={content.together.imageSrc}
+        imageAlt="Together we make a difference"
+        imageAspect="banner"
+      />
     </div>
   );
 }

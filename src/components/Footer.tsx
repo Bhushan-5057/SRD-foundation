@@ -11,9 +11,9 @@ import { FOOTER_NAV } from "../constants/navigation";
 
 const COMPANY_LINKS = [
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
-  { href: "/blogs", label: "Blogs" },
-  { href: "/contact", label: "Contact" },
+  { href: "/interventions", label: "Interventions" },
+  { href: "/volunteer", label: "Volunteer" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 export function Footer() {

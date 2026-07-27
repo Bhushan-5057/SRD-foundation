@@ -122,17 +122,20 @@ export const adminNotificationTemplate = ({
   email,
   subject,
   message,
+  phone,
 }: {
   firstName: string;
   lastName: string;
   email: string;
   subject: string;
   message: string;
+  phone?: string;
 }) => {
   const safeFirstName = escapeHtml(firstName);
   const safeLastName = escapeHtml(lastName);
   const safeEmail = escapeHtml(email);
   const safeSubject = escapeHtml(subject);
+  const safePhone = phone ? escapeHtml(phone) : "";
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br/>");
 
   return `
@@ -161,6 +164,8 @@ A new message has been submitted through the website contact form.
 <p><strong>Name:</strong> ${safeFirstName} ${safeLastName}</p>
 
 <p><strong>Email:</strong> ${safeEmail}</p>
+
+${safePhone ? `<p><strong>Phone:</strong> ${safePhone}</p>` : ""}
 
 <p><strong>Subject:</strong> ${safeSubject}</p>
 

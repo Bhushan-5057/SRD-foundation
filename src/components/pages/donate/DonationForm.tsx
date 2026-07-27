@@ -76,7 +76,7 @@ export function DonationForm() {
                 </span>
               </a>
               <p className="mt-3 px-1 text-xs leading-5 text-[var(--text-muted)] sm:text-sm">
-                Tap the email or copy it into your bank's Interac e-Transfer recipient field.
+                Tap the email or copy it into your bank&apos;s Interac e-Transfer recipient field.
               </p>
             </div>
 

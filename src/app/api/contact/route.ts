@@ -40,9 +40,10 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { firstName, lastName, email, subject, message } = body;
-    
-     if (!firstName || !lastName || !email || !subject || !message) {
+    const { firstName, lastName, email, subject, message, phone } = body;
+    const resolvedSubject = subject?.trim() || "Volunteer Registration";
+
+     if (!firstName || !lastName || !email || !message) {
       return NextResponse.json(
         { success: false, error: "Missing required fields" },
         { status: 400 }
@@ -55,14 +56,15 @@ export async function POST(req: Request) {
     phase = "send-admin-email";
     await sendMail({
       to: process.env.CONTACT_RECEIVER_EMAIL!,
-      subject: `[SRD Foundation] ${subject}`,
+      subject: `[SRD Foundation] ${resolvedSubject}`,
       replyTo: email,
       html: adminNotificationTemplate({
         firstName,
         lastName,
         email,
-        subject,
+        subject: resolvedSubject,
         message,
+        phone,
       }),
     });
 
@@ -70,7 +72,7 @@ export async function POST(req: Request) {
     phase = "send-user-email";
     await sendMail({
       to: email,
-      subject: `We received your message about "${subject}"`,
+      subject: `We received your message about "${resolvedSubject}"`,
       replyTo: process.env.CONTACT_RECEIVER_EMAIL,
       html: userThankYouTemplate({
         name: fullName,

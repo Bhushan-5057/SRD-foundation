@@ -4,6 +4,7 @@ export type ContactFormData = {
   email: string;
   subject: string;
   message: string;
+  phone?: string;
 };
 
 export type ContactFormErrors = {
@@ -11,11 +12,13 @@ export type ContactFormErrors = {
   lastName?: string;
   email?: string;
   message?: string;
+  phone?: string;
 };
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^[\d\s+().-]{7,20}$/;
 
-export function validateContactField(name: string, value: string) {
+export function validateContactField(name: string, value: string, requirePhone = false) {
   switch (name) {
     case "firstName":
       if (!value.trim()) return "First name is required.";
@@ -30,6 +33,13 @@ export function validateContactField(name: string, value: string) {
       if (!emailRegex.test(value)) return "Please enter a valid email address.";
       return "";
 
+    case "phone":
+      if (requirePhone && !value.trim()) return "Phone number is required.";
+      if (value.trim() && !phoneRegex.test(value.trim())) {
+        return "Please enter a valid phone number.";
+      }
+      return "";
+
     case "message":
       if (!value.trim()) return "Message cannot be empty.";
       return "";
@@ -39,7 +49,11 @@ export function validateContactField(name: string, value: string) {
   }
 }
 
-export function validateContactForm(data: ContactFormData): ContactFormErrors {
+export function validateContactForm(
+  data: ContactFormData,
+  options?: { requirePhone?: boolean }
+): ContactFormErrors {
+  const requirePhone = Boolean(options?.requirePhone);
   const errors: ContactFormErrors = {};
 
   const firstNameError = validateContactField("firstName", data.firstName);
@@ -50,6 +64,9 @@ export function validateContactForm(data: ContactFormData): ContactFormErrors {
 
   const emailError = validateContactField("email", data.email);
   if (emailError) errors.email = emailError;
+
+  const phoneError = validateContactField("phone", data.phone ?? "", requirePhone);
+  if (phoneError) errors.phone = phoneError;
 
   const messageError = validateContactField("message", data.message);
   if (messageError) errors.message = messageError;

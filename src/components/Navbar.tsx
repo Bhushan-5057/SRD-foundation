@@ -123,16 +123,14 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           className={`absolute left-0 top-[calc(100%+10px)] w-[330px] rounded-2xl border border-[var(--border-color)] bg-[var(--surface)] p-3 shadow-xl transition-all duration-200 ${isDropdownOpen ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-1 opacity-0"
             }`}
         >
-          {item.href !== "/community" && (
-            <>
-              <Link
-                href={item.href}
-                className="mb-2 block rounded-xl px-3 py-2 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-soft)]"
-                onClick={closeDesktopMenuImmediately}
-              >
-                View All {item.label}
-              </Link>
-            </>
+          {item.children && item.children.length > 1 && (
+            <Link
+              href={item.href}
+              className="mb-2 block rounded-xl px-3 py-2 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-soft)]"
+              onClick={closeDesktopMenuImmediately}
+            >
+              View All {item.label}
+            </Link>
           )}
           <div className="mt-2 space-y-1">
             {item.children?.map((child) => (
