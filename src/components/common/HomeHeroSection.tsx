@@ -55,7 +55,7 @@ export function HomeHeroSection({
 
   return (
     <section
-      className={`${FULL_BLEED_CLASS} overflow-hidden min-h-[420px] sm:min-h-[520px] lg:min-h-[580px]`}
+      className={`${FULL_BLEED_CLASS} relative h-[58vh] min-h-[320px] overflow-hidden bg-black md:h-[65vh] md:min-h-[360px] lg:h-[75vh]`}
     >
       {safeSlides.map((slide, index) => (
         <div
@@ -71,14 +71,15 @@ export function HomeHeroSection({
             priority={index === 0}
             label={`Hero image ${index + 1}`}
             sizes="100vw"
-            objectPosition="object-[center_35%] sm:object-center"
+            objectFit="cover"
+            objectPosition="object-[center_32%] md:object-[center_38%] lg:object-center"
           />
         </div>
       ))}
 
       <ImageTextOverlay variant="hero" />
 
-      <div className="relative z-10 mx-auto flex h-full min-h-[420px] w-full max-w-6xl items-center px-4 py-12 sm:min-h-[520px] sm:px-6 sm:py-14 lg:min-h-[580px] lg:py-16">
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-6xl items-center px-4 py-8 sm:px-6 sm:py-10 lg:py-12">
         <div className="max-w-2xl">
           <p
             data-aos="fade-up"
